@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Portland State University: ES Style Sample</title>
+
+    <!--Bootstrap CSS-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--Custom Bootstrap theme -->
+    <!-- Use https://psu[-dev]-centralized.netlify.com/ -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" />
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+    <!--Bootstrap JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--jQuery Confirm (Alert boxes)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/2.5.1/jquery-confirm.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/2.5.1/jquery-confirm.min.js"></script>
+
+    <!--FontAwesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/eb9dc7fd32.css" />
+
+    <!-- SquareSerif Font -->
+    <!-- Copy font files to your project. Do not link to these files. -->
+    <style type="text/css">
+        @font-face {
+            font-family: "SquareSerifBook";
+            font-style: normal;
+            font-weight: normal;
+            src:    local(""),
+            url("fonts/SquareSerif-Book-webfont.woff")          format("woff"),
+            url("fonts/SquareSerif-Book-webfont.ttf")           format("truetype"),
+            url("fonts/SquareSerif-Book-webfont.svg#webfont")   format("svg");
+        }
+    </style>
+
+    <!--PSU-ES CSS-->
+    <!-- Use https://psu[-dev]-centralized.netlify.com/ -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+
+    <!--PSU-ES JS-->
+    <!-- Use https://psu[-dev]-centralized.netlify.com/ -->
+    <script src="javascript/main.js"></script>
+
+    <!--IS Grails Plugin feature CSS & JS-->
+    <!-- Use https://psu[-dev]-centralized.netlify.com/ -->
+    <script src="javascript/is-grails.js"></script>
+    <link rel="stylesheet" href="css/is-grails.css" />
+
+</head>
+<body>
+<div id="skip-link" class="sr-only"><a href="#pageContent">Skip to content</a></div>
+
+<div id="header-wrap" class="hidden-xs">
+
+    <div id="header" class="container">
+        <div class="pull-right">
+            <ul class="nav" id="utility-nav-parent">
+                <li class="first"><a href="http://www.pdx.edu">PSU Home</a></li>
+                <li><a href="https://banweb.pdx.edu">Banweb</a></li>
+            </ul>
+        </div>
+        <img src="images/psu_logo.png" alt="Portland State University" class="pull-left" id="logo" />
+        <span class="appTitle pull-left">ES Sample Template <span class="nonprod">(NonProduction)</span></span>
+    </div>
+</div>
+
+<div id="mobile-header-wrap" class="visible-xs"></div>
+
+<div id="main" class="faux-body">
+    <nav id="navigation" class="navbar " role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand visible-xs-block" href="index.html"><img src="images/psu_knot.png" alt="PSU" width="20" height="20" style="margin-right:6px" class="pull-left" />Template ES Site</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Info</a></li>
+                    <li><a href="#">More Info</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Nav Menu <span class="caret"></span></a>
+                        <ul class="dropdown-menu nav-dropdown-menu">
+                            <li><a href="#">Sub-item 1</a></li>
+                            <li><a href="#">Sub-item 2</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Sub-item 3</a></li>
+                        </ul>
+                    </li>
+                    <!-- end menu items -->
+                </ul>
+            </div><!--/.container-fluid -->
+        </div>
+    </nav>
+
+
+    <div id="main-content" class="content container-fluid">
+        <a id="pageContent"></a>
+        <!-- Main central content begins HERE -->
+
+        <!-- Flash Messages -->
+        <div id="flash-message-container">
+
+            <div class="alert alert-danger alert-dismissible flash-message" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                Oh no! This terrible thing just happened...
+            </div>
+
+            <div class="alert alert-warning alert-dismissible flash-message" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                Watch out!
+            </div>
+
+            <div class="alert alert-info alert-dismissible flash-message" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat
+                facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            </div>
+
+            <div class="alert alert-success alert-dismissible flash-message" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                Great... your thing worked!
+            </div>
+        </div>
+
+
+
+        <h1>H1 Heading</h1>
+        <div class="intro-text">
+            <p>This is a big paragraph that goes above everything and doesn't say anything but does so with a lot of words and things.  It's in a div with <code>.intro-text</code>.</p>
+        </div>
+
+        <h2>H2 Heading</h2>
+        <p>Normal <code>&lt;p&gt;</code> block. Note that paragraphs by default carry some extra vertical whitespace; if you need to keep things more dense, use a div.</p>
+
+        <h3>H3 Heading</h3>
+        <p class="note"><code>.note</code> shrinks the text for a minor note that is meant to be parenthetical.</p>
+
+        <h4>H4 Heading</h4>
+        <p class="well">You can use a block in a <code>.well</code> to quote blocks of text, provide server responses, etc.</p>
+
+        <h2>Tables</h2>
+        <p class="note">Note that the <code>.btn-xs</code> class is nice for fitting buttons into tables like below, but that this interface is
+            not ideal for phone-based users.  For staff-facing intranet apps that are expected to be accessed from a desktop, though,
+            they can really work!</p>
+        <div class="table-responsive">
+        <table class="table table-striped">
+            <caption class="sr-only">Example table</caption>
+            <thead>
+            <tr>
+                <th scope="col">TH Cell</th>
+                <th scope="col">TH Cell</th>
+                <th scope="col">
+                    &nbsp;
+                    <span class="sr-only">Action Button</span>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Row 1 Cell 1</td>
+                <td>Row 1 cell 2</td>
+                <td><button class="btn btn-xs btn-primary">Button</button></td>
+            </tr>
+            <tr>
+                <td>Row 2 Cell 1</td>
+                <td>
+                    <input type="text" class="form-control datepicker" placeholder="Example Datepicker" id="dpex" />
+                    <label class="sr-only" for="dpex">Select a date, for example.</label>
+                </td>
+                <td><button class="btn btn-xs btn-primary">Button</button></td>
+            </tr>
+            <tr>
+                <td>Row 3 Cell 1</td>
+                <td>Row 3 Cell 2</td>
+                <td><button class="btn btn-xs btn-primary">Button</button></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+
+
+        <h1>AJAX Indicators</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Loading</h2>
+                <button class="btn btn-default btn-sm" onclick="clearAjaxLoadDiv();clearAjaxLoadImage();$(this).after(getAjaxLoadImage());">Small</button><br />
+                <span class="text-muted sm">getAjaxLoadImage()</span><br />
+                <br />
+                <button class="btn btn-default btn-sm" onclick="clearAjaxLoadDiv();clearAjaxLoadImage();setAjaxLoadDiv();">Large</button><br />
+                <span class="text-muted sm">setAjaxLoadDiv();</span><br />
+
+            </div>
+            <div class="col-md-4">
+                <h2>Saving</h2>
+                <button class="btn btn-success btn-xs" onclick="$(this).after(getAjaxSavedIcon());">Successful save</button><br />
+                <span class="text-muted sm">getAjaxSavedIcon();</span><br />
+                <br />
+                <button class="btn btn-danger btn-xs" onclick="$(this).after(getAjaxSaveFailedIcon());">Failed save</button><br />
+                <span class="text-muted sm">getAjaxSaveFailedIcon();</span><br />
+            </div>
+            <div class="col-md-4">
+                <h2>Status</h2>
+                <button class="btn btn-success btn-xs" onclick="$(this).after(getAjaxStatusSuccessIcon());">Successful event</button><br />
+                <span class="text-muted sm">getAjaxStatusSuccessIcon();</span><br />
+                <br />
+                <button class="btn btn-danger btn-xs" onclick="$(this).after(getAjaxStatusFailedIcon());">Failed event</button><br />
+                <span class="text-muted sm">getAjaxStatusFailedIcon();</span><br />
+            </div>
+        </div>
+
+
+        <h1>Alerts &amp; Confirmations</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-warning" onclick="psuAlert('This is an alert...', 'Watch Out!');">psuAlert();</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary" onclick="sampleConfirmation();">$.confirm()</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary" onclick="samplePrompt();">$.confirm() as Prompt</button>
+            </div>
+        </div>
+
+
+
+        <div style="height:80px" />
+
+        <!-- Main central content ends HERE -->
+    </div>
+</div>
+</nav>
+<div class="container-fluid placemat">
+    <a href="https://www.pdx.edu/copyright" title="Portland State Copyright Information">&copy; 2016</a>
+
+
+    <div id="icon-toolbar" aria-hidden="true">
+        <span class="sr-only">Site actions toolbar</span>
+
+
+        <span class="sr-only">
+            Website version:
+            2.6.7
+        </span>
+        <button class="btn btn-icon" aria-hidden="true" onmouseover="$('#gavt').removeClass('hidden');" onmouseout="$('#gavt').addClass('hidden');">
+            <i class="hidden" aria-hidden="true" id="gavt">2.6.7</i>
+            <i class="fa fa-tag icon" aria-hidden="true"></i>
+        </button>
+
+        <button class="btn btn-icon " onclick="setInlineEditMode('On');">
+            <i id="inline-edit-on" class="fa fa-pencil icon" style="color:#AAA" title="Inline-Edit Mode is Off" aria-hidden="true"></i>
+            <span class="sr-only">Turn inline infotext editing On</span>
+        </button>
+
+
+
+
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript">
+    function sampleConfirmation() {
+        $.confirm({
+            icon: 'fa fa-bell-o',
+            cancelButton: 'No',
+            confirmButton: 'Yes',
+            title: 'Confirmation',
+            content: 'Please confirm this <em>important</em> decision...',
+            confirm: function () {
+            },
+            cancel: function () {
+            }
+        });
+    }
+    function samplePrompt() {
+        $.confirm({
+            icon: 'fa fa-pencil',
+            cancelButton: 'Cancel',
+            confirmButton: 'Submit',
+            theme: 'white', //supervan does not work with inputs. Will not allow you to type in them.
+            title: 'Prompt',
+            content: 'What is the answer?<br /><br /><input type="text" class="form-control" />',
+            confirm: function () {
+            },
+            cancel: function () {
+            }
+        });
+    }
+
+    //Enable datepicker
+    $('.datepicker').datepicker();
+
+    //Auto-hide alerts
+    prependFlashMessageIcons();
+    hideMessages();
+
+</script>
+</html>

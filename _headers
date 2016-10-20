@@ -1,0 +1,4 @@
+## Fonts path:
+/fonts/*
+  # Headers for that path:
+  Access-Control-Allow-Origin: *

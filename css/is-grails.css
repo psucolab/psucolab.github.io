@@ -1,0 +1,93 @@
+#proxy-toolbar{
+    position: absolute;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:1;
+}
+#proxy-toolbar form{
+    display:inline;
+    float:right;
+    max-width: 200px;
+}
+
+#icon-toolbar{
+    display: inline;
+    float:right;
+}
+#icon-toolbar .icon{
+    padding: 3px;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+}
+.btn-icon{
+    padding: 0px;
+    border: 0px;
+    background-color: inherit;
+}
+
+
+#log-console{
+    position: absolute;
+    position: fixed;
+    bottom: 30px;
+    right: 0px;
+    margin: 1px;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #333;
+    background-color: #000;
+    color: #FFF;
+    font-family: courier, fixed-width, sans-serif;
+    font-size: 16px;
+    line-height: 17px;
+    max-height: 90%;
+    max-width: 90%;
+    overflow: auto;
+    z-index: 9999;
+}
+#log-console i{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin-bottom: 5px;
+}
+
+
+.editable-text{
+    position: relative;
+}
+.editable-text-hover{
+    color: #6a7f10;
+}
+.editable-text-tooltip{
+    position: absolute;
+    top: -20px;
+    padding: 3px;
+    width: 200px;
+
+    font-size: 8pt;
+    font-weight: normal;
+    line-height:10px;
+    font-family: arial, sans-serif;
+
+    background-color: #e2e987;
+    color: #6a7f10;
+    border: 1px dotted #6a7f10;
+    border-bottom: 0px;
+    border-radius: 3px;
+
+}
+
+/** FLASH MESSAGES **/
+#flash-message-container{
+    display:                    block;
+    position:                   absolute;
+    position:                   fixed;
+    right:                      0;
+    top:                        0;
+    z-index:                    20000;
+    padding: 10px 3px;
+    margin: 0;
+    max-width: 300px;
+}
